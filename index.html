@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  /* dvh handles mobile address bars better than vh */
+  
   height: 100vh;
   height: 100dvh; 
   overflow:hidden;
@@ -47,12 +47,12 @@ body.night{
 
 @keyframes starAppear{ from{opacity:0;} to{opacity:0.8;} }
 
-/* --- Flowers --- */
+
 .field{
   position:absolute;
   bottom:0;
   width:100%;
-  height:30%; /* Slightly shorter on mobile to give space */
+  height:30%; 
   display:flex;
   justify-content:space-around;
   align-items:flex-end;
@@ -64,7 +64,7 @@ body.night{
   position:relative;
   transform-origin:bottom center;
   animation:wind 5s ease-in-out infinite;
-  transform: scale(0.8); /* Slightly smaller flowers for mobile */
+  transform: scale(0.8);
 }
 
 @keyframes wind{ 0%,100%{transform:scale(0.8) rotate(-3deg)} 50%{transform:scale(0.8) rotate(3deg)} }
@@ -107,7 +107,7 @@ body.night{
 .petal:nth-child(7){transform:rotate(270deg)}
 .petal:nth-child(8){transform:rotate(315deg)}
 
-/* Falling petals */
+
 .falling{
   position:absolute;
   top:-50px;
@@ -121,7 +121,7 @@ body.night{
   100%{transform:translateY(110vh) rotate(360deg);opacity:0}
 }
 
-/* --- Content Box --- */
+
 .content{
   position:relative;
   z-index:100;
@@ -144,7 +144,7 @@ body.night{
 
 h1{
   font-family:'Dancing Script',cursive;
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Auto-resize text */
+  font-size: clamp(2rem, 5vw, 3.5rem); 
   margin-bottom:20px;
   text-shadow:2px 2px 12px rgba(0,0,0,0.3);
   line-height: 1.2;
@@ -161,14 +161,14 @@ button{
   transition:all 0.3s ease;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  /* Prevent blue highlight on mobile tap */
+  
   -webkit-tap-highlight-color: transparent; 
 }
 
 #yesBtn{ background: linear-gradient(to right, #ff4d6d, #ff758c); color:white; }
 #noBtn{ background: white; color:#ff4d6d; }
 
-/* Celebration Layout */
+
 #celebrationContainer {
   display: none;
   flex-direction: column;
@@ -183,7 +183,7 @@ button{
   justify-content: center;
   align-items: center;
   gap: 15px;
-  flex-wrap: wrap; /* Allows stacking on tiny screens */
+  flex-wrap: wrap; 
 }
 
 .love-gif{
@@ -211,16 +211,16 @@ button{
   z-index: 999;
 }
 
-/* --- MOBILE OPTIMIZATION --- */
+
 @media (max-width: 600px) {
   .content {
     padding: 20px;
     width: 95%;
-    margin-top: -15vh; /* Push up slightly on mobile */
+    margin-top: -15vh; 
   }
 
   .love-gif {
-    width: 140px; /* Smaller GIFs for mobile */
+    width: 140px; 
     height: 140px;
   }
   
@@ -229,7 +229,7 @@ button{
   }
 
   .flower {
-    transform: scale(0.6); /* Smaller flowers */
+    transform: scale(0.6); 
   }
 }
 </style>
@@ -261,7 +261,7 @@ button{
     </div>
     
     <iframe 
-      data-testid="embed-iframe" style="border-radius:12px" 
+      data-testid="embed-iframe"  
       src="https://open.spotify.com/embed/track/63g7T96x98kozrsNDHWqHv?utm_source=generator" 
       frameBorder="0" allowfullscreen="" 
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -360,3 +360,4 @@ yesBtn.addEventListener("click", function(){
 
 </body>
 </html>
+

@@ -262,8 +262,10 @@ button{
     
     <iframe 
       data-testid="embed-iframe" style="border-radius:12px" 
-      src="https://open.spotify.com/embed/track/63g7T96x98kozrsNDHWqHv?utm_source=generator"
-      frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+      src="https://open.spotify.com/embed/track/63g7T96x98kozrsNDHWqHv?utm_source=generator" 
+      frameBorder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
     </iframe>
   </div>
 </div>
@@ -309,7 +311,7 @@ setTimeout(()=>{
 
 let particles = [];
 function createFirework(x, y) {
-    const colors = ['#ff4d6d', '#ff7eb3', '#ffd3a5', '#fff', '#ba68c8'];
+    const colors = ['#ff4d6d', '#ff7eb3', '#ffd3a5', '#fff', '#ba68c8'];  
     for (let i = 0; i < 40; i++) {
         particles.push({
             x, y,
@@ -335,7 +337,7 @@ function animateFireworks() {
 noBtn.addEventListener("click",function(){
   size+=0.5;
   yesBtn.style.transform=`scale(${size})`;
-
+  
   if(size>6){
     yesBtn.style.position="fixed";
     yesBtn.style.top="0"; yesBtn.style.left="0";
